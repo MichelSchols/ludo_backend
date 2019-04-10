@@ -1,4 +1,4 @@
-package org.ludo.backend.models;
+package com.example.ludo.models;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -12,7 +12,8 @@ public enum SpelerEnum {
     private final int waarde;
     private Map map = new HashMap<>();
 
-    private SpelerEnum(int waarde) {
+    //note: java enum constructors are by definition private
+    SpelerEnum(int waarde) {
         this.waarde = waarde;
     }
 }

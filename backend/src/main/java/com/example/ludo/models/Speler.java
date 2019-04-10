@@ -1,4 +1,4 @@
-package org.ludo.backend.models;
+package com.example.ludo.models;
 
 public class Speler {
 

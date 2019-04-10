@@ -1,4 +1,4 @@
-package org.ludo.backend.models;
+package com.example.ludo.models;
 
 public class Speelbord {
     private static final int LENGTE_RONDGANG = 64;

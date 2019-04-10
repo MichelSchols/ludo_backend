@@ -1,9 +1,10 @@
-package org.ludo.backend.SpelController;
+package com.example.ludo.controller;
 
-import org.ludo.backend.models.Gebruiker;
-import org.ludo.backend.models.Spel;
-import org.ludo.backend.models.Speler;
-import org.ludo.backend.models.SpelerEnum;
+
+import com.example.ludo.models.Gebruiker;
+import com.example.ludo.models.Spel;
+import com.example.ludo.models.Speler;
+import com.example.ludo.models.SpelerEnum;
 
 public class SpelController {
     public Spel nieuwSpel(Gebruiker[] deelnemers) {
