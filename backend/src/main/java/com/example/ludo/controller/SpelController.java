@@ -1,24 +1,24 @@
 package com.example.ludo.controller;
 
 
-import com.example.ludo.models.Gebruiker;
-import com.example.ludo.models.Spel;
-import com.example.ludo.models.Speler;
-import com.example.ludo.models.SpelerEnum;
+import com.example.ludo.models.User;
+import com.example.ludo.models.GameParticipant;
+import com.example.ludo.models.Game;
+import com.example.ludo.models.GameParticipantTableSeat;
 
 public class SpelController {
-    public Spel nieuwSpel(Gebruiker[] deelnemers) {
-        return new Spel(gebruikersNaarSpelers(deelnemers));
+    public Game nieuwSpel(User[] deelnemers) {
+        return new Game(gebruikersNaarSpelers(deelnemers));
     }
 
-    private Speler[] gebruikersNaarSpelers(Gebruiker[] deelnemers) {
+    private GameParticipant[] gebruikersNaarSpelers(User[] deelnemers) {
         if (deelnemers.length != 4) throw new IllegalArgumentException("Aantal spelers moet gelijk zijn aan 4");
-        Speler[] spelers = new Speler[4];
-        spelers[0] = new Speler(deelnemers[0].getNaam(), SpelerEnum.SPELER_NOORD);
-        spelers[1] = new Speler(deelnemers[1].getNaam(), SpelerEnum.SPELER_OOST);
-        spelers[2] = new Speler(deelnemers[2].getNaam(), SpelerEnum.SPELER_ZUID);
-        spelers[3] = new Speler(deelnemers[3].getNaam(), SpelerEnum.SPELER_WEST);
+        GameParticipant[] gameParticipants = new GameParticipant[4];
+        gameParticipants[0] = new GameParticipant(deelnemers[0].getName(), GameParticipantTableSeat.SEAT_NORTH);
+        gameParticipants[1] = new GameParticipant(deelnemers[1].getName(), GameParticipantTableSeat.SEAT_EAST);
+        gameParticipants[2] = new GameParticipant(deelnemers[2].getName(), GameParticipantTableSeat.SEAT_SOUTH);
+        gameParticipants[3] = new GameParticipant(deelnemers[3].getName(), GameParticipantTableSeat.SEAT_WEST);
 
-        return spelers;
+        return gameParticipants;
     }
 }

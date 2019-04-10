@@ -1,10 +1,10 @@
 package com.example.ludo.models;
 
-public class Vak {
+public class Space {
     // generated id
     private long id;
 
     // nullable
     // one-to-one
-    private Pion pionInVak;
+    private GameToken gameTokenOnSpace;
 }
